@@ -1,4 +1,5 @@
 <h1>{{ note.title }}</h1>
 <h2>{{ note.content }}</h2>
 <a href="{% url 'edit-note' note.id %}"> <h2>edit</h2> </a>
+<a href="{% url 'delete-note' note.id %}"> <h2>delete</h2> </a>
 <h2>{{ note.created }}</h2>

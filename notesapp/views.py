@@ -48,3 +48,18 @@ def edit_note(request, pk):
         'form': form,
     }
     return render(request, 'notesapp/note_form.html', context)
+
+
+def delete_note(request, pk):
+    note = Note.objects.get(id=pk)
+
+    if request.method == 'POST':
+        note.delete()
+        return redirect('home')
+
+    context = {
+        'object': note,
+    }
+    return render(request, 'notesapp/delete_template.html', context)
+
+    pass
