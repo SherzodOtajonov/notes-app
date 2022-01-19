@@ -8,6 +8,7 @@
 </head>
 <body>
     <a href="{% url 'make-note'%}"> <h1>Make New Note</h1> </a>
+    <h2>Count of notes: {{ notes_count }}</h2>
     {% for note in notes %}
         <a href="{% url 'note' note.id %}"><h2>{{ note.title }}</h2></a>
     {% endfor %}

@@ -6,6 +6,7 @@ from .forms import NoteForm
 def home(request):
     context = {
         "notes": Note.objects.all(),
+        "notes_count": Note.objects.all().count(),
     }
     return render(request, 'notesapp/main.html', context)
 
