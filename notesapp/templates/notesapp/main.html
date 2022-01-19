@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{% url 'make-note'%}"> <h1>Make New Note</h1> </a>
     {% for note in notes %}
         <a href="{% url 'note' note.id %}"><h2>{{ note.title }}</h2></a>
     {% endfor %}
